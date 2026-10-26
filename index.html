@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lab 1 Interactive Circles</title>
+<style>
+body { font-family: sans-serif; margin: 24px; }
+canvas {
+    display: block; max-width: 100%; height: auto;
+    background: #f3f4f6; margin: 12px 0;
+    touch-action: none;
+}
+button, input, select { margin-right: 12px; }
+</style>
+</head>
+<body>
+<h1>Interactive Circles - Kyrillos Adel</h1>
+
+<label for="selected">Select Circle:</label>
+<select id="selected">
+    <option value="0">Circle 1</option>
+    <option value="1">Circle 2</option>
+    <option value="2">Circle 3</option>
+</select>
+
+<label for="color">Color:</label>
+<input id="color" type="color" value="#ff0000">
+
+<label for="speed">Horizontal Speed:</label>
+<input id="speed" type="number" value="100">
+<button id="apply" type="button">Apply</button>
+
+<button id="toggle" type="button">Pause</button>
+<button id="reset" type="button">Reset</button>
+
+<canvas id="scene" width="640" height="360" aria-label="Animated circles"></canvas>
+
+<p id="status"></p>
+<p id="errorMsg" style="color: red; font-weight: bold;"></p>
+
+<script type="module" src="./dist/main.js"></script>
+</body>
+</html>
